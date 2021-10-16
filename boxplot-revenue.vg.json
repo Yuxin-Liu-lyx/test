@@ -1,0 +1,122 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/Yuxin-Liu-lyx/FIT3179/main/Private%20and%20Public%20Revenue-%20Cleaned.csv"
+    },
+    "title":"Average income by sector in Australia",
+    "vconcat": [
+      {
+        "width": 600,
+        "height": 90,
+        "encoding": {
+          "y": {"field": "Sector", "type": "nominal", "title": ""},
+          "color": {
+            "field": "Sector",
+            "type": "nominal",
+            "legend": null,
+            "title": "Sector",
+            "scale": {
+              "domain": ["Private", "Public"],
+              "range": ["#ec7014", "#2c7fb8"]
+            }
+          },
+          "x": {
+            "field": "Person($)",
+            "type": "quantitative",
+            "scale": {"zero": false, "domain": [1000, 2000]},
+            "title": "Revenue per person"
+          }
+        },
+        "layer": [
+          {"mark": {"type": "boxplot"}},
+          {
+            "mark": {
+              "type": "text",
+              "align": "center",
+              "baseline": "top",
+              "dx": 0,
+              "dy": 5,
+              "fontSize": 11.5,
+              "fontStyle": "italic"
+            }
+          }
+        ]
+      },
+      {
+        "width": 600,
+        "height": 90,
+        "encoding": {
+          "y": {"field": "Sector", "type": "nominal", "title": ""},
+          "color": {
+            "field": "Sector",
+            "type": "nominal",
+            "legend": null,
+            "title": "Sector",
+            "scale": {
+              "domain": ["Private", "Public"],
+              "range": ["#ec7014", "#2c7fb8"]
+            }
+          },
+          "x": {
+            "field": "Male($)",
+            "type": "quantitative",
+            "scale": {"zero": false, "domain": [1000, 2000]},
+            "title": "Average income of Male"
+          }
+        },
+        "layer": [
+          {"mark": {"type": "boxplot"}},
+          {
+            "mark": {
+              "type": "text",
+              "align": "center",
+              "baseline": "top",
+              "dx": 0,
+              "dy": 5,
+              "fontSize": 11.5,
+              "fontStyle": "italic"
+            }
+          }
+        ]
+    },
+    {
+        "width": 600,
+        "height": 90,
+        "encoding": {
+          "y": {"field": "Sector", "type": "nominal", "title": ""},
+          "color": {
+            "field": "Sector",
+            "type": "nominal",
+            "legend": null,
+            "title": "Sector",
+            "scale": {
+              "domain": ["Private", "Public"],
+              "range": ["#ec7014", "#2c7fb8"]
+            }
+          },
+          "x": {
+            "field": "Female($)",
+            "type": "quantitative",
+            "scale": {"zero": false, "domain": [1000, 2000]},
+            "title": "Average income of Female"
+          }
+        },
+        "layer": [
+          {"mark": {"type": "boxplot"}},
+          {
+            "mark": {
+              "type": "text",
+              "align": "center",
+              "baseline": "top",
+              "dx": 0,
+              "dy": 5,
+              "fontSize": 11.5,
+              "fontStyle": "italic"
+            }
+          }
+        ]
+    }
+    ]
+}   
+    
+  
