@@ -1,0 +1,446 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/LSteele15/Project_2/main/COVID19%20LGA%20Regional_dps.csv"
+    },
+    "vconcat": [
+      {
+        "width": 600,
+        "height": 90,
+        "encoding": {
+          "y": {"field": "region", "type": "nominal", "title": ""},
+          "color": {
+            "field": "region",
+            "type": "nominal",
+            "legend": null,
+            "title": "region",
+            "scale": {
+              "domain": ["Regional", "Metro"],
+              "range": ["#ec7014", "#2c7fb8"]
+            }
+          },
+          "x": {
+            "field": "age",
+            "type": "quantitative",
+            "scale": {"zero": false, "domain": [27, 61]},
+            "title": "Median Age"
+          }
+        },
+        "layer": [
+          {"mark": {"type": "boxplot"}},
+          {
+            "mark": {
+              "type": "text",
+              "align": "center",
+              "baseline": "top",
+              "dx": 0,
+              "dy": 5,
+              "fontSize": 11.5,
+              "fontStyle": "italic"
+            },
+            "encoding": {
+              "text": {"field": "LGA", "type": "nominal"},
+              "color": {"value": "#034e7b"},
+              "opacity": {
+                "condition": {
+                  "test": "datum['age'] > 45 && datum['region'] == 'Metro'",
+                  "value": 1
+                },
+                "value": 0
+              }
+            }
+          },
+          {
+            "mark": {"type": "point"},
+            "encoding": {
+              "opacity": {"value": 0},
+              "tooltip": [
+                {"field": "LGA", "type": "nominal"},
+                {
+                  "field": "age",
+                  "type": "quantitative",
+                  "format": ",",
+                  "title": "Median Age"
+                },
+                {"field": "region", "type": "nominal", "title": ""}
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "width": 600,
+        "height": 90,
+        "encoding": {
+          "y": {"field": "region", "type": "nominal", "title": ""},
+          "color": {
+            "field": "region",
+            "type": "nominal",
+            "legend": null,
+            "title": ""
+          },
+          "x": {
+            "field": "case_rate",
+            "type": "quantitative",
+            "scale": {"domain": [0, 1450]},
+            "title": "Active Cases per 100,000"
+          }
+        },
+        "layer": [
+          {"mark": {"type": "boxplot"}},
+          {
+            "mark": {
+              "type": "text",
+              "align": "center",
+              "baseline": "top",
+              "dx": 5,
+              "dy": 5,
+              "fontSize": 11.5,
+              "fontStyle": "italic"
+            },
+            "encoding": {
+              "text": {"field": "LGA", "type": "nominal"},
+              "color": {"value": "#034e7b"},
+              "opacity": {
+                "condition": {
+                  "test": "datum['case_rate'] > 600 && datum['region'] == 'Metro'",
+                  "value": 1
+                },
+                "value": 0
+              }
+            }
+          },
+          {
+            "mark": {
+              "type": "text",
+              "align": "center",
+              "baseline": "bottom",
+              "dx": 0,
+              "dy": -4,
+              "fontSize": 11.5,
+              "fontStyle": "italic"
+            },
+            "encoding": {
+              "text": {"field": "LGA", "type": "nominal"},
+              "color": {"value": "#cc4c02"},
+              "opacity": {
+                "condition": {"test": "datum['LGA'] == 'Mitchell'", "value": 1},
+                "value": 0
+              }
+            }
+          },
+          {
+            "mark": {"type": "point"},
+            "encoding": {
+              "opacity": {"value": 0},
+              "tooltip": [
+                {"field": "LGA", "type": "nominal"},
+                {
+                  "field": "case_rate",
+                  "type": "quantitative",
+                  "format": ",",
+                  "title": "Active Cases per 100,000"
+                },
+                {"field": "region", "type": "nominal", "title": ""}
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "width": 600,
+        "height": 90,
+        "encoding": {
+          "y": {"field": "region", "type": "nominal", "title": ""},
+          "color": {
+            "field": "region",
+            "type": "nominal",
+            "legend": null,
+            "title": ""
+          },
+          "x": {
+            "field": "Second",
+            "type": "quantitative",
+            "scale": {"zero": false},
+            "title": "2nd Vaccination %"
+          }
+        },
+        "layer": [
+          {"mark": "boxplot"},
+          {
+            "mark": {
+              "type": "text",
+              "align": "center",
+              "baseline": "top",
+              "dx": 0,
+              "dy": 5,
+              "fontSize": 11.5,
+              "fontStyle": "italic"
+            },
+            "encoding": {
+              "text": {"field": "LGA", "type": "nominal"},
+              "color": {"value": "#034e7b"},
+              "opacity": {
+                "condition": {
+                  "test": "datum['LGA'] == 'Bayside' && datum['region'] == 'Metro'",
+                  "value": 1
+                },
+                "value": 0
+              }
+            }
+          },
+          {
+            "mark": {
+              "type": "text",
+              "align": "center",
+              "baseline": "bottom",
+              "dx": -10,
+              "dy": -5,
+              "fontSize": 11.5,
+              "fontStyle": "italic"
+            },
+            "encoding": {
+              "text": {"field": "LGA", "type": "nominal"},
+              "color": {"value": "#cc4c02"},
+              "opacity": {
+                "condition": {
+                  "test": "datum['LGA'] == 'Queenscliffe'",
+                  "value": 1
+                },
+                "value": 0
+              }
+            }
+          },
+          {
+            "mark": {"type": "point"},
+            "encoding": {
+              "opacity": {"value": 0},
+              "tooltip": [
+                {"field": "LGA", "type": "nominal"},
+                {
+                  "field": "Second",
+                  "type": "quantitative",
+                  "format": ",",
+                  "title": "2nd Vaccination %"
+                },
+                {"field": "region", "type": "nominal", "title": ""}
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "width": 600,
+        "height": 90,
+        "encoding": {
+          "y": {"field": "region", "type": "nominal", "title": ""},
+          "color": {
+            "field": "region",
+            "type": "nominal",
+            "legend": null,
+            "title": ""
+          },
+          "x": {
+            "field": "prop_non_english",
+            "type": "quantitative",
+            "scale": {"zero": false},
+            "title": "Non-English speakers per 100,000"
+          }
+        },
+        "layer": [
+          {"mark": "boxplot"},
+          {
+            "mark": {
+              "type": "text",
+              "align": "center",
+              "baseline": "top",
+              "dx": -3,
+              "dy": 5,
+              "fontSize": 11.5,
+              "fontStyle": "italic"
+            },
+            "encoding": {
+              "text": {
+                "field": "LGA",
+                "type": "nominal",
+                "condition": {
+                  "test": "datum['prop_non_english'] > 14000",
+                  "value": ["Greater", "Dandenong"]
+                }
+              },
+              "color": {"value": "#034e7b"},
+              "opacity": {
+                "condition": {
+                  "test": "datum['prop_non_english'] > 12000",
+                  "value": 1
+                },
+                "value": 0
+              }
+            }
+          },
+          {
+            "mark": {"type": "point"},
+            "encoding": {
+              "opacity": {"value": 0},
+              "tooltip": [
+                {"field": "LGA", "type": "nominal"},
+                {
+                  "field": "prop_non_english",
+                  "type": "quantitative",
+                  "format": ",",
+                  "title": "Non-English speakers per 100,000"
+                },
+                {"field": "region", "type": "nominal", "title": ""}
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "width": 600,
+        "height": 90,
+        "encoding": {
+          "y": {"field": "region", "type": "nominal", "title": ""},
+          "color": {
+            "field": "region",
+            "type": "nominal",
+            "legend": null,
+            "title": ""
+          },
+          "x": {
+            "field": "pop_density",
+            "type": "quantitative",
+            "scale": {"zero": false},
+            "title": "Population Density (/km^2)"
+          }
+        },
+        "layer": [
+          {"mark": {"type": "boxplot"}},
+          {
+            "mark": {"type": "point"},
+            "encoding": {
+              "opacity": {"value": 0},
+              "tooltip": [
+                {"field": "LGA", "type": "nominal"},
+                {
+                  "field": "pop_density",
+                  "type": "quantitative",
+                  "format": ",",
+                  "title": "Population Density (/km^2)"
+                },
+                {"field": "region", "type": "nominal", "title": ""}
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "width": 600,
+        "height": 90,
+        "encoding": {
+          "y": {"field": "region", "type": "nominal", "title": ""},
+          "color": {
+            "field": "region",
+            "type": "nominal",
+            "legend": null,
+            "title": ""
+          },
+          "x": {
+            "field": "weekly_income",
+            "type": "quantitative",
+            "scale": {"zero": false, "domain": [400, 1125]},
+            "title": "Median Weekly Income ($)"
+          }
+        },
+        "layer": [
+          {"mark": "boxplot"},
+          {
+            "mark": {
+              "type": "text",
+              "align": "center",
+              "baseline": "top",
+              "dx": 0,
+              "dy": 5,
+              "fontSize": 11.5,
+              "fontStyle": "italic"
+            },
+            "encoding": {
+              "text": {"field": "LGA", "type": "nominal"},
+              "color": {"value": "#034e7b"},
+              "opacity": {
+                "condition": {"test": "datum['LGA'] == 'Yarra'", "value": 1},
+                "value": 0
+              }
+            }
+          },
+          {
+            "mark": {
+              "type": "text",
+              "align": "center",
+              "baseline": "bottom",
+              "dx": 5,
+              "dy": -5,
+              "fontSize": 11.5,
+              "fontStyle": "italic"
+            },
+            "encoding": {
+              "text": {"field": "LGA", "type": "nominal"},
+              "color": {"value": "#034e7b"},
+              "opacity": {
+                "condition": {
+                  "test": "datum['LGA'] == 'Stonnington'",
+                  "value": 1
+                },
+                "value": 0
+              }
+            }
+          },
+          {
+            "mark": {
+              "type": "text",
+              "align": "center",
+              "baseline": "top",
+              "dx": 4,
+              "dy": 6,
+              "fontSize": 11.5,
+              "fontStyle": "italic"
+            },
+            "encoding": {
+              "text": {
+                "field": "LGA",
+                "type": "nominal",
+                "condition": {
+                  "test": "datum['LGA'] == 'Port Phillip'",
+                  "value": ["Port", "Phillip"]
+                }
+              },
+              "color": {"value": "#034e7b"},
+              "opacity": {
+                "condition": {
+                  "test": "datum['LGA'] == 'Port Phillip'",
+                  "value": 1
+                },
+                "value": 0
+              }
+            }
+          },
+          {
+            "mark": {"type": "point"},
+            "encoding": {
+              "opacity": {"value": 0},
+              "tooltip": [
+                {"field": "LGA", "type": "nominal"},
+                {
+                  "field": "weekly_income",
+                  "type": "quantitative",
+                  "format": ",",
+                  "title": "Median Weekly Income ($)"
+                },
+                {"field": "region", "type": "nominal", "title": ""}
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
