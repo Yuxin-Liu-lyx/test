@@ -3,10 +3,11 @@
 }
 
 body {
-    min-height: 100vh;
-    max-width: 1100px;
+    width: 1100px;
     background-color: #F6F6EB; 
     margin: 0 auto;
+    padding: 50px;
+    padding-top: 10px;
 }
 
 h1{
@@ -18,14 +19,6 @@ h2{
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
-}
-ul{
-    list-style-type: square;
-}
-li{
-    margin: 10px 0;
-    font-size: 18px;
-    line-height: 1.4;
 }
 
 .vis-container{
@@ -51,8 +44,4 @@ li{
 .pure-g{
     margin-bottom: 30px;
 }
-.author p{
-    padding-top: 50px;
-    color: grey;
-    text-align: right;
-}
+
