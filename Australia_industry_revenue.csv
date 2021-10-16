@@ -1,0 +1,19 @@
+﻿Industry,Persons ($),Males ($),Females ($),Category
+Mining,2674.30 ,2748.70 ,2276.80 ,Heavy industry
+Manufacturing,1562.10 ,1608.80 ,1394.40 ,Heavy industry
+"Electricity, gas, water & waste services",1909.40 ,1941.20 ,1793.20 ,Heavy industry
+Construction,1695.10 ,1733.70 ,1445.10 ,Heavy industry
+Wholesale trade,1634.10 ,1707.10 ,1451.80 ,Light industry
+Retail trade,1311.30 ,1376.20 ,1227.90 ,Light industry
+Accommodation & food services,1201.90 ,1252.60 ,1121.40 ,Service industry
+"Transport, postal & warehousing",1696.50 ,1754.00 ,1487.50 ,Light industry
+Information media & telecommunications,2102.10 ,2231.90 ,1860.50 ,Light industry
+Financial & insurance services,2065.40 ,2319.70 ,1759.70 ,Service industry
+"Rental, hiring & real estate services",1593.30 ,1737.70 ,1406.10 ,Service industry
+"Professional, scientific & technical services",2035.70 ,2255.00 ,1684.10 ,Service industry
+Administrative & support services,1512.10 ,1604.50 ,1367.50 ,Service industry
+Public administration & safety,1844.30 ,1904.40 ,1765.30 ,Service industry
+Education & training,1849.80 ,2002.70 ,1773.50 ,Service industry
+Health care & social assistance,1696.90 ,1978.00 ,1569.50 ,Service industry
+Arts & recreation services,1543.70 ,1609.20 ,1434.80 ,Service industry
+Other services,1331.90 ,1336.40 ,1324.60 ,Other services
