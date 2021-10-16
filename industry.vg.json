@@ -1,0 +1,112 @@
+
+   
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 600,
+    "height": 600,
+    "title": "Austraila weekly average revenue with different industry ",
+    "data": {
+      "url": "https://raw.githubusercontent.com/Yuxin-Liu-lyx/Homework-10/main/Australia_industry_revenue.csv"
+    },
+    "params": [
+      {
+        "name": "Category_selection",
+        "bind": {
+          "input": "select",
+          "options": [
+            null,
+            "Heavy industry",
+            "Light industry",
+            "Service industry",
+            "Other services"
+          ],
+          "labels": [
+            "Show All",
+            "Heavy industry",
+            "Light industry",
+            "Service industry",
+            "Other services"
+          ],
+          "name": "Industry Category Selection: "
+        }
+      }
+    ],
+    "transform": [
+      {"filter": "Category_selection == null || datum.Category == Category_selection"}
+    ],
+    "encoding": {
+      "x": {
+        "field": "Males ($)",
+        "type": "quantitative",
+        "title": "Males ($) Average Revenue",
+        "axis": {"tickCount": 7},
+        "scale": {"type": "log", "domain": [1000, 3000]}
+      },
+      "y": {
+        "field": "Females ($)",
+        "type": "quantitative",
+        "title": "Females ($) Average Revenue",
+        "axis": {"tickCount": 7},
+        "scale": {"domain": [1000, 2400]}
+      }
+    },
+    "layer": [
+      {
+        "mark": {
+            "type": "circle",
+            "size": 500
+          },
+        "encoding": {
+          "color": {
+            "field": "Category",
+            "type": "nominal",
+            "scale": {
+              "domain": [
+                "Heavy industry",
+                "Light industry",
+                "Service industry",
+                "Other services"
+              ],
+              "range": [
+                "#e41a1c",
+                "#C0C6B2",
+                "#B5BDC8",
+                "#D1CAB8"
+              ]
+            }
+          },
+          "tooltip": [
+            {"field": "Industry", "type": "nominal"},
+            {"field": "Males ($)", "type": "quantitative", "format": ","},
+            {"field": "Females ($)", "type": "quantitative", "format": ","}
+          ]
+        }
+      },
+      {
+        "mark": {
+          "type": "text",
+          "align": "right",
+          "baseline": "middle",
+          "dx": -12,
+          "fontSize": 11.5,
+          "fontStyle": "italic"
+        },
+        "encoding": {
+          "text": {"field": "Industry", "type": "nominal"},
+          "color": {"value": "black"},
+          "opacity": {
+            "condition": {
+              "test": "datum['Industry'] == 'Mining' || datum['Industry'] == 'Construction'|| datum['Industry'] == 'Education & training'",
+              "value": 1
+            },
+            "value": 0
+          },
+          "tooltip": [
+            {"field": "Industry", "type": "nominal"},
+            {"field": "Males ($)", "type": "quantitative", "format": ","},
+            {"field": "Females ($)", "type": "quantitative", "format": ","}
+          ]
+        }
+      }
+    ]
+  }
