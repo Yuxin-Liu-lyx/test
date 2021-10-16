@@ -4,7 +4,7 @@
 
 body {
     min-height: 100vh;
-    max-width: 400px;
+    max-width: 1100px;
     background-color: #F6F6EB; 
     margin: 0 auto;
 }
@@ -27,13 +27,7 @@ li{
     font-size: 18px;
     line-height: 1.4;
 }
-.page{
-    width: 1100px;    
-    background-color: #f5f5f5;   
-    margin: auto;
-    padding: 50px;
-    padding-top: 10px;
-}
+
 .vis-container{
     width: 100%;
 }
