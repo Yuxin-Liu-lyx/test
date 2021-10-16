@@ -1,9 +1,45 @@
-#choropleth_map {
-	top:100px;
-	bottom: 100px; 
-	left: 100px;
-	right: 100px;
-	/*height: 1000px;
-	width: 800px;*/
+*{
+    font-family: 'Open Sans', sans-serif;
 }
 
+h2{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.page{
+    width: 1100px;    
+    background-color: #f5f5f5;   
+    margin: auto;
+    padding: 50px;
+    padding-top: 10px;
+}
+.vis-container{
+    width: 100%;
+}
+.description h1, h2{
+    margin-top: 20px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.description p{
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 17px;
+    line-height: 1.4;
+}
+.description-left{
+    padding-right: 30px;
+}
+.description-right{
+    padding-left: 30px;
+}
+.pure-g{
+    margin-bottom: 30px;
+}
+.author p{
+    padding-top: 50px;
+    color: grey;
+    text-align: right;
+}
