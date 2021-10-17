@@ -21,6 +21,12 @@ h2{
 .vis-container{
     width: 100%;
 }
+
+.vis-container-right{
+    width:100%;
+    float:right;
+}
+
 .description h2{
     margin-top: 20px;
     text-align: center;
