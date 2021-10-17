@@ -2,8 +2,8 @@
    
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 600,
-    "height": 600,
+    "width": "container",
+    "height": "container",
     "title": "Austraila weekly average revenue with different industry ",
     "data": {
       "url": "https://raw.githubusercontent.com/Yuxin-Liu-lyx/Homework-10/main/Australia_industry_revenue.csv"
