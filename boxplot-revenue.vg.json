@@ -6,7 +6,7 @@
   "title":"Average income by sector in Australia",
   "vconcat": [
     {
-      "width": "container",
+      "width": "400",
       "height": 90,
       "encoding": {
         "y": {"field": "Sector", "type": "nominal", "title": ""},
