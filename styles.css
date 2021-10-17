@@ -33,7 +33,8 @@ h2{
     line-height: 1.4;
 }
 .description-left{
-   padding-left: 30px;
+   padding-right: 30px;
+   width:300px
     
 }
 .description-right{
