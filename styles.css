@@ -58,7 +58,8 @@ h2{
 }
 .pure-g{
     margin-bottom: 30px;
-    justify-content: space-between;
+    display: flex;
+    align-content: space-between;
     
 }
 
