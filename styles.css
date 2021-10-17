@@ -52,7 +52,7 @@ h2{
 
 .pure-g-1{
     display:grid;
-    width:1000px;
+    width:1050px;
     grid-template-columns:350px 600px;
     align-items:right;
     justify-content:space-between;
