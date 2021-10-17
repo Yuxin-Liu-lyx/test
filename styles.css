@@ -36,7 +36,7 @@ h2{
 }
 .description-left{
    padding-right: 30px;
-   width:350px;
+   width:380px;
     
 }
 .description-right{
@@ -53,7 +53,7 @@ h2{
 .pure-g-1{
     display:grid;
     width:1050px;
-    grid-template-columns:350px 600px;
+    grid-template-columns:380px 600px;
     align-items:right;
     justify-content:space-between;
 }
