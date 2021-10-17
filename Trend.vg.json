@@ -3,7 +3,7 @@
      "data": {"url": "https://raw.githubusercontent.com/Yuxin-Liu-lyx/test/main/Income%20Increase.csv"},
      "background":"#F6F6EB",
      "vconcat": [{
-     "width": "container",
+     "width": "600",
      "height": 300,
      "title":"Trand of Income in Australia",
      "mark": "area",
@@ -20,7 +20,7 @@
      }
      }, 
      {
-     "width": "container",
+     "width": "600",
      "height": 60,
      "mark": "line",
      "params": [{
