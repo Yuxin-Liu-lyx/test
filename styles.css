@@ -34,12 +34,12 @@ h2{
 }
 .description-left{
    padding-right: 30px;
-   width:200px
+   width:200px;
     
 }
 .description-right{
-    padding-left: 20px;
-    width:300px
+    float:right;
+    width:300px;
 }
 .pure-g{
     margin-bottom: 30px;
