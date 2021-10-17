@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": "600",
-    "height": "600",
+    "height": "400",
     "title": "Average income by region in Australia",
     "projection":{"type": "equirectangular"},
     "data":{
@@ -17,6 +17,7 @@
         },
             "key": "STE_NAME16",
             "fields": ["Persons"]
+            
       }
         }
     ],
@@ -24,6 +25,7 @@
     "encoding": {
         "color":{
             "field":"Persons",
+            "title":"Income",
             "type": "quantitative",
             "scale":{
                 "domain":[1400,1560,1750,1770,2000],
@@ -31,7 +33,7 @@
         },
         "tooltip":[
             {"field":"properties.STE_NAME16","type": "nominal","title":"State"},
-            {"field":"Persons","type": "quantitative"}
+            {"field":"Persons","type": "quantitative","title":"Income"}
         ]
     
     }
