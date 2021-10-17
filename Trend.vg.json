@@ -4,6 +4,7 @@
      "vconcat": [{
      "width": "container",
      "height": 300,
+     "background":"#F6F6EB",
      "title":"Trand of Income in Australia",
      "mark": "area",
      "encoding": {
