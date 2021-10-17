@@ -16,7 +16,7 @@
      "scale": {"domain": {"param": "brush"}},
      "axis": {"title": ""}
      },
-     "y": {"field": "Persons ($)", "type": "quantitative"}
+     "y": {"field": "Persons ($)", "type": "quantitative","title":"Income($)"}
      }
      }, 
      {
@@ -36,8 +36,9 @@
      "y": {
      "field": "Persons ($)",
      "type": "quantitative",
+     "title":"Income($)",
      "axis": {"tickCount": 3, "grid": false}
      }
      }
      }]
-     }
+     } 
