@@ -1,8 +1,11 @@
+
+   
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {
     "url": "https://raw.githubusercontent.com/Yuxin-Liu-lyx/FIT3179/main/Private%20and%20Public%20Revenue-%20Cleaned.csv"
   },
+  "background":"#F6F6EB",
   "title":"Average income by sector in Australia",
   "vconcat": [
     {
@@ -117,6 +120,4 @@
       ]
   }
   ]
-}    
-    
-  
+} 
