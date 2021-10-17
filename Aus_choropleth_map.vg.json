@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": "container",
+    "width": "600",
     "height": "600",
     "title": "Average income by region in Australia",
     "projection":{"type": "equirectangular"},
