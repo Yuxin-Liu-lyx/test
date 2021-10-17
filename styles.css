@@ -24,8 +24,8 @@ h2{
 
 .pure-u-3-4 {
   display: flex;
-  align-items: center;
-  justify-content:right ;
+  flex-direction: row;
+  justify-content:end ;
   margin-left: auto;
 }
 
