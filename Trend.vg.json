@@ -1,10 +1,10 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
      "data": {"url": "https://raw.githubusercontent.com/Yuxin-Liu-lyx/test/main/Income%20Increase.csv"},
+     "background":"#F6F6EB",
      "vconcat": [{
      "width": "container",
      "height": 300,
-     "background":"#F6F6EB",
      "title":"Trand of Income in Australia",
      "mark": "area",
      "encoding": {
@@ -22,7 +22,6 @@
      {
      "width": "container",
      "height": 60,
-     "background":"#F6F6EB",
      "mark": "line",
      "params": [{
      "name": "brush",
