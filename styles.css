@@ -52,8 +52,8 @@ h2{
 
 .pure-g-1{
     display:grid;
-    width:980px;
-    grid-template-columns:300px 600px;
+    width:1000px;
+    grid-template-columns:350px 600px;
     align-items:right;
     justify-content:space-between;
 }
